@@ -1,0 +1,71 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="900" height="300" viewBox="0 0 900 300" role="img" aria-label="Animated developer terminal">
+  <style>
+    .bg { fill: #0d1117; stroke: #30363d; stroke-width: 2; }
+    .bar { fill: #161b22; }
+    .mono { font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace; font-size: 18px; }
+    .muted { fill: #8b949e; }
+    .text { fill: #c9d1d9; }
+    .green { fill: #3fb950; }
+    .blue { fill: #58a6ff; }
+    .purple { fill: #bc8cff; }
+    .line1, .line2, .line3, .line4, .line5, .line6 { opacity: 0; animation: show 9s infinite; }
+    .line1 { animation-delay: .3s; }
+    .line2 { animation-delay: 1.5s; }
+    .line3 { animation-delay: 2.7s; }
+    .line4 { animation-delay: 4.0s; }
+    .line5 { animation-delay: 5.2s; }
+    .line6 { animation-delay: 6.4s; }
+    .cursor { fill: #58a6ff; animation: blink .8s steps(1,end) infinite; }
+    .scan { opacity: .18; animation: scan 4s linear infinite; }
+    @keyframes show {
+      0%, 4% { opacity: 0; transform: translateY(3px); }
+      8%, 78% { opacity: 1; transform: translateY(0); }
+      88%, 100% { opacity: 0; }
+    }
+    @keyframes blink { 0%, 48% { opacity: 1; } 49%, 100% { opacity: 0; } }
+    @keyframes scan { 0% { transform: translateX(-900px); } 100% { transform: translateX(900px); } }
+  </style>
+
+  <rect x="1" y="1" width="898" height="298" rx="14" class="bg"/>
+  <path d="M15 1h870a14 14 0 0 1 14 14v38H1V15A14 14 0 0 1 15 1Z" class="bar"/>
+  <circle cx="30" cy="27" r="7" fill="#ff5f56"/>
+  <circle cx="53" cy="27" r="7" fill="#ffbd2e"/>
+  <circle cx="76" cy="27" r="7" fill="#27c93f"/>
+  <text x="450" y="33" text-anchor="middle" class="mono muted">kaue@github — profile</text>
+
+  <g class="mono">
+    <g class="line1">
+      <text x="28" y="88" class="green">kaue@github</text>
+      <text x="152" y="88" class="muted">:</text>
+      <text x="165" y="88" class="blue">~</text>
+      <text x="181" y="88" class="text">$ whoami</text>
+    </g>
+    <text x="28" y="120" class="line2 text">Kauê Ajure — Full Stack Developer</text>
+
+    <g class="line3">
+      <text x="28" y="157" class="green">kaue@github</text>
+      <text x="152" y="157" class="muted">:</text>
+      <text x="165" y="157" class="blue">~</text>
+      <text x="181" y="157" class="text">$ stack --show</text>
+    </g>
+    <text x="28" y="190" class="line4 blue">React  •  Next.js  •  TypeScript  •  Node.js</text>
+    <text x="28" y="222" class="line5 purple">MySQL  •  SQL Server  •  Redis  •  Linux</text>
+
+    <g class="line6">
+      <text x="28" y="260" class="green">kaue@github</text>
+      <text x="152" y="260" class="muted">:</text>
+      <text x="165" y="260" class="blue">~</text>
+      <text x="181" y="260" class="text">$ build something useful</text>
+      <rect x="443" y="244" width="10" height="21" rx="1" class="cursor"/>
+    </g>
+  </g>
+
+  <rect x="-260" y="54" width="220" height="245" fill="url(#shine)" class="scan"/>
+  <defs>
+    <linearGradient id="shine" x1="0" x2="1">
+      <stop offset="0" stop-color="#58a6ff" stop-opacity="0"/>
+      <stop offset=".5" stop-color="#58a6ff" stop-opacity=".35"/>
+      <stop offset="1" stop-color="#58a6ff" stop-opacity="0"/>
+    </linearGradient>
+  </defs>
+</svg>
