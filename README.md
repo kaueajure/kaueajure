@@ -4,10 +4,6 @@
 
 <img src="https://readme-typing-svg.demolab.com?font=Fira+Code&weight=600&size=22&pause=1000&color=58A6FF&center=true&vCenter=true&width=760&lines=Full+Stack+Developer;Building+SaaS+%26+Web+Applications;React+%E2%80%A2+TypeScript+%E2%80%A2+Node.js;APIs+%E2%80%A2+SQL+%E2%80%A2+Linux" alt="Typing animation" />
 
-**Web Applications · SaaS · APIs · Banco de Dados**
-
-Desenvolvo sistemas web completos, ferramentas internas e produtos digitais com foco em **simplicidade, performance e experiência de uso**.
-
 [![LinkedIn](https://img.shields.io/badge/LinkedIn-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/kaueajure/)
 [![GitHub](https://img.shields.io/badge/GitHub-6E7681?style=for-the-badge&logo=github&logoColor=white)](https://github.com/kaueajure)
 [![Email](https://img.shields.io/badge/Email-FFFFFF?style=for-the-badge&logo=gmail&logoColor=EA4335)](mailto:kaueajure@gmail.com)
@@ -18,15 +14,7 @@ Desenvolvo sistemas web completos, ferramentas internas e produtos digitais com 
 
 ## 👨‍💻 Sobre mim
 
-Sou desenvolvedor **Full Stack**, focado na criação de aplicações web, sistemas SaaS e ferramentas que resolvem problemas reais.
-
-Gosto de trabalhar desde a interface até o backend e banco de dados, construindo soluções completas, organizadas e fáceis de manter.
-
-- 💻 Desenvolvimento **Frontend e Backend**
-- ⚙️ APIs, autenticação, integrações e automações
-- 🗄️ Modelagem e integração com bancos de dados
-- 🚀 Deploy, ambientes Linux e aplicações em produção
-- 🧩 Interesse especial por sistemas de gestão, ferramentas internas e produtos SaaS
+Desenvolvedor **Full Stack** com foco em aplicações web, SaaS, APIs e bancos de dados.
 
 <img width="100%" src="https://raw.githubusercontent.com/kaueajure/kaueajure/main/assets/divider.svg" alt="" />
 
@@ -61,7 +49,7 @@ Gosto de trabalhar desde a interface até o backend e banco de dados, construind
 
 ### 🎫 [Gestifique](https://github.com/kaueajure/gestifique)
 
-Plataforma de **gestão de tickets e atendimento** com recursos como SLA, portal do cliente, base de conhecimento, automações e suporte a processamento em background.
+Plataforma de **gestão de tickets e atendimento** com SLA, portal do cliente, base de conhecimento, automações e processamento em background.
 
 **Stack:** React · TypeScript · Node.js · Express · MySQL · Redis · Socket.IO
 
@@ -70,33 +58,30 @@ Plataforma de **gestão de tickets e atendimento** com recursos como SLA, portal
 
 ### 🎬 [Flixa](https://github.com/kaueajure/flixa)
 
-Plataforma de **entretenimento e descoberta de conteúdo**, com catálogo, grupos, esportes e integrações com fontes externas.
+Plataforma de **entretenimento e descoberta de conteúdo**, com catálogo, grupos, esportes e integrações externas.
 
 **Stack:** TypeScript · React · APIs · Cloudflare · Drizzle
 
 </td>
 </tr>
 <tr>
-<td width="50%" valign="top">
+<td colspan="2" valign="top">
 
 ### 🏛️ [Portal Meta](https://github.com/kaueajure/portalmeta)
 
-Sistema web de **gestão e acompanhamento de demandas**, desenvolvido com arquitetura full stack e foco em produtividade e organização.
+Sistema web de **gestão e acompanhamento de demandas**.
 
 **Stack:** React · TypeScript · Node.js · Express · MySQL · Socket.IO
 
 </td>
-<td width="50%" valign="top">
+</tr>
+</table>
 
-### 🔨 Em evolução
-
-Estou sempre construindo novos projetos e experimentando soluções para **SaaS, sistemas internos, automações e aplicações web completas**.
+<div align="center">
 
 [Ver todos os repositórios →](https://github.com/kaueajure?tab=repositories)
 
-</td>
-</tr>
-</table>
+</div>
 
 <img width="100%" src="https://raw.githubusercontent.com/kaueajure/kaueajure/main/assets/divider.svg" alt="" />
 
@@ -116,22 +101,6 @@ Estou sempre construindo novos projetos e experimentando soluções para **SaaS,
   <img height="165" alt="Linguagens mais usadas" src="https://github-readme-stats.vercel.app/api/top-langs/?username=kaueajure&layout=compact&hide_border=true" />
 </picture>
 
-### 🐍 Contribuições em movimento
-
-<img width="100%" alt="Animação snake das contribuições públicas recentes" src="https://raw.githubusercontent.com/kaueajure/kaueajure/main/assets/contribution-snake.svg" />
-
-</div>
-
-<img width="100%" src="https://raw.githubusercontent.com/kaueajure/kaueajure/main/assets/divider.svg" alt="" />
-
-<div align="center">
-
-### 📫 Vamos conversar?
-
-[![LinkedIn](https://img.shields.io/badge/LinkedIn-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/kaueajure/)
-[![GitHub](https://img.shields.io/badge/GitHub-6E7681?style=for-the-badge&logo=github&logoColor=white)](https://github.com/kaueajure)
-[![Email](https://img.shields.io/badge/Email-FFFFFF?style=for-the-badge&logo=gmail&logoColor=EA4335)](mailto:kaueajure@gmail.com)
-
-<sub>Construindo soluções úteis, uma feature de cada vez.</sub>
+<img width="100%" alt="Contribuições do GitHub" src="https://raw.githubusercontent.com/kaueajure/kaueajure/main/assets/contribution-snake.svg" />
 
 </div>
