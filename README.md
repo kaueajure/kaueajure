@@ -22,7 +22,7 @@ Atuo do front-end ao back-end, incluindo APIs, autenticação, integrações, co
 
 - **Frontend:** React, Next.js, TypeScript e Tailwind CSS
 - **Backend:** Node.js, Express, APIs REST e Socket.IO
-- **Dados e infraestrutura:** MySQL, SQL Server, Redis, Git e Linux
+- **Dados e infraestrutura:** MySQL, SQL Server, Git e Linux
 
 <picture>
   <img width="100%" src="https://raw.githubusercontent.com/kaueajure/kaueajure/main/assets/divider.svg" alt="" />
@@ -40,9 +40,7 @@ Atuo do front-end ao back-end, incluindo APIs, autenticação, integrações, co
 
 ![MySQL](https://img.shields.io/badge/MySQL-4479A1?style=for-the-badge&logo=mysql&logoColor=white)
 ![SQL Server](https://img.shields.io/badge/SQL%20Server-CC2927?style=for-the-badge&logo=microsoftsqlserver&logoColor=white)
-![Redis](https://img.shields.io/badge/Redis-DC382D?style=for-the-badge&logo=redis&logoColor=white)
 ![Tailwind CSS](https://img.shields.io/badge/Tailwind%20CSS-06B6D4?style=for-the-badge&logo=tailwindcss&logoColor=white)
-![Vite](https://img.shields.io/badge/Vite-646CFF?style=for-the-badge&logo=vite&logoColor=white)
 
 ![Git](https://img.shields.io/badge/Git-F05032?style=for-the-badge&logo=git&logoColor=white)
 ![Linux](https://img.shields.io/badge/Linux-FCC624?style=for-the-badge&logo=linux&logoColor=black)
