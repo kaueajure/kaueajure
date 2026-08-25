@@ -16,7 +16,13 @@
 
 ### 👨‍💻 Sobre mim
 
-Desenvolvedor **Full Stack** com foco em aplicações web, SaaS, APIs e bancos de dados.
+Sou desenvolvedor **Full Stack** e trabalho na construção de aplicações web completas, sistemas de gestão, plataformas SaaS e ferramentas internas.
+
+Atuo do front-end ao back-end, incluindo APIs, autenticação, integrações, comunicação em tempo real, bancos de dados e deploy em ambientes Linux.
+
+- **Frontend:** React, Next.js, TypeScript e Tailwind CSS
+- **Backend:** Node.js, Express, APIs REST e Socket.IO
+- **Dados e infraestrutura:** MySQL, SQL Server, Redis, Git e Linux
 
 <picture>
   <img width="100%" src="https://raw.githubusercontent.com/kaueajure/kaueajure/main/assets/divider.svg" alt="" />
