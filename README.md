@@ -8,9 +8,9 @@
 
 Desenvolvo sistemas web completos, ferramentas internas e produtos digitais com foco em **simplicidade, performance e experiência de uso**.
 
-[![LinkedIn](https://img.shields.io/badge/LinkedIn-Kauê%20Ajure-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/kaueajure/)
-[![GitHub](https://img.shields.io/badge/GitHub-kaueajure-181717?style=for-the-badge&logo=github&logoColor=white)](https://github.com/kaueajure)
-[![Email](https://img.shields.io/badge/Email-Contato-EA4335?style=for-the-badge&logo=gmail&logoColor=white)](mailto:kaueajure@gmail.com)
+[![LinkedIn](https://img.shields.io/badge/LinkedIn-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/kaueajure/)
+[![GitHub](https://img.shields.io/badge/GitHub-6E7681?style=for-the-badge&logo=github&logoColor=white)](https://github.com/kaueajure)
+[![Email](https://img.shields.io/badge/Email-FFFFFF?style=for-the-badge&logo=gmail&logoColor=EA4335)](mailto:kaueajure@gmail.com)
 
 </div>
 
@@ -125,10 +125,9 @@ Estou sempre construindo novos projetos e experimentando soluções para **SaaS,
 
 ### 📫 Vamos conversar?
 
-Se quiser falar sobre desenvolvimento, projetos ou oportunidades:
-
-[![LinkedIn](https://img.shields.io/badge/LinkedIn-Entrar%20em%20contato-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/kaueajure/)
-[![Email](https://img.shields.io/badge/Email-kaueajure%40gmail.com-EA4335?style=for-the-badge&logo=gmail&logoColor=white)](mailto:kaueajure@gmail.com)
+[![LinkedIn](https://img.shields.io/badge/LinkedIn-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/kaueajure/)
+[![GitHub](https://img.shields.io/badge/GitHub-6E7681?style=for-the-badge&logo=github&logoColor=white)](https://github.com/kaueajure)
+[![Email](https://img.shields.io/badge/Email-FFFFFF?style=for-the-badge&logo=gmail&logoColor=EA4335)](mailto:kaueajure@gmail.com)
 
 <sub>Construindo soluções úteis, uma feature de cada vez.</sub>
 
