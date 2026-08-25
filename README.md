@@ -14,7 +14,9 @@ Desenvolvo sistemas web completos, ferramentas internas e produtos digitais com 
 
 <br />
 
-<img width="900" src="https://raw.githubusercontent.com/kaueajure/kaueajure/main/assets/terminal.svg" alt="Terminal animado de Kauê Ajure" />
+<picture>
+  <img width="900" src="https://raw.githubusercontent.com/kaueajure/kaueajure/main/assets/terminal.svg" alt="Terminal animado de Kauê Ajure" />
+</picture>
 
 </div>
 
