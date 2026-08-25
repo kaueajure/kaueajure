@@ -2,7 +2,7 @@
 
 # Kauê Ajure
 
-### Full Stack Developer
+<img src="https://readme-typing-svg.demolab.com?font=Fira+Code&weight=600&size=22&pause=1000&color=58A6FF&center=true&vCenter=true&width=760&lines=Full+Stack+Developer;Building+SaaS+%26+Web+Applications;React+%E2%80%A2+TypeScript+%E2%80%A2+Node.js;APIs+%E2%80%A2+SQL+%E2%80%A2+Linux" alt="Typing animation" />
 
 **Web Applications · SaaS · APIs · Banco de Dados**
 
@@ -12,9 +12,13 @@ Desenvolvo sistemas web completos, ferramentas internas e produtos digitais com 
 [![GitHub](https://img.shields.io/badge/GitHub-6E7681?style=for-the-badge&logo=github&logoColor=white)](https://github.com/kaueajure)
 [![Email](https://img.shields.io/badge/Email-FFFFFF?style=for-the-badge&logo=gmail&logoColor=EA4335)](mailto:kaueajure@gmail.com)
 
+<br />
+
+<img width="900" src="https://raw.githubusercontent.com/kaueajure/kaueajure/main/assets/terminal.svg" alt="Terminal animado de Kauê Ajure" />
+
 </div>
 
----
+<img width="100%" src="https://raw.githubusercontent.com/kaueajure/kaueajure/main/assets/divider.svg" alt="" />
 
 ## 👨‍💻 Sobre mim
 
@@ -28,7 +32,7 @@ Gosto de trabalhar desde a interface até o backend e banco de dados, construind
 - 🚀 Deploy, ambientes Linux e aplicações em produção
 - 🧩 Interesse especial por sistemas de gestão, ferramentas internas e produtos SaaS
 
----
+<img width="100%" src="https://raw.githubusercontent.com/kaueajure/kaueajure/main/assets/divider.svg" alt="" />
 
 ## ⚡ Tech Stack
 
@@ -51,7 +55,7 @@ Gosto de trabalhar desde a interface até o backend e banco de dados, construind
 
 </div>
 
----
+<img width="100%" src="https://raw.githubusercontent.com/kaueajure/kaueajure/main/assets/divider.svg" alt="" />
 
 ## 🚀 Projetos em destaque
 
@@ -98,7 +102,7 @@ Estou sempre construindo novos projetos e experimentando soluções para **SaaS,
 </tr>
 </table>
 
----
+<img width="100%" src="https://raw.githubusercontent.com/kaueajure/kaueajure/main/assets/divider.svg" alt="" />
 
 ## 📊 GitHub
 
@@ -116,9 +120,17 @@ Estou sempre construindo novos projetos e experimentando soluções para **SaaS,
   <img height="165" alt="Linguagens mais usadas" src="https://github-readme-stats.vercel.app/api/top-langs/?username=kaueajure&layout=compact&hide_border=true" />
 </picture>
 
+### 🐍 Contribuições em movimento
+
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/kaueajure/kaueajure/output/github-snake-dark.svg" />
+  <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/kaueajure/kaueajure/output/github-snake.svg" />
+  <img width="100%" alt="Animação snake das contribuições do GitHub" src="https://raw.githubusercontent.com/kaueajure/kaueajure/output/github-snake.svg" />
+</picture>
+
 </div>
 
----
+<img width="100%" src="https://raw.githubusercontent.com/kaueajure/kaueajure/main/assets/divider.svg" alt="" />
 
 <div align="center">
 
