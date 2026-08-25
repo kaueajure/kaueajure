@@ -19,6 +19,9 @@ jobs:
     timeout-minutes: 5
 
     steps:
+      - name: Verify GitHub runner
+        run: echo "GitHub Actions runner is available"
+
       - name: Generate snake from real GitHub contributions
         uses: Platane/snk/svg-only@v3
         with:
