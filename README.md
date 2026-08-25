@@ -12,12 +12,6 @@ Desenvolvo sistemas web completos, ferramentas internas e produtos digitais com 
 [![GitHub](https://img.shields.io/badge/GitHub-6E7681?style=for-the-badge&logo=github&logoColor=white)](https://github.com/kaueajure)
 [![Email](https://img.shields.io/badge/Email-FFFFFF?style=for-the-badge&logo=gmail&logoColor=EA4335)](mailto:kaueajure@gmail.com)
 
-<br />
-
-<picture>
-  <img width="900" src="https://raw.githubusercontent.com/kaueajure/kaueajure/main/assets/terminal.svg" alt="Terminal animado de Kauê Ajure" />
-</picture>
-
 </div>
 
 <img width="100%" src="https://raw.githubusercontent.com/kaueajure/kaueajure/main/assets/divider.svg" alt="" />
