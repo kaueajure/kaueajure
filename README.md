@@ -1,16 +1,38 @@
-## Hi there 👋
+# 👋 Olá, eu sou o Kauê Ajure
 
-<!--
-**kaueajure/kaueajure** is a ✨ _special_ ✨ repository because its `README.md` (this file) appears on your GitHub profile.
+Full Stack Developer focado em desenvolvimento de sistemas web, SaaS e ferramentas internas.
 
-Here are some ideas to get you started:
+## 🚀 Tecnologias
 
-- 🔭 I’m currently working on ...
-- 🌱 I’m currently learning ...
-- 👯 I’m looking to collaborate on ...
-- 🤔 I’m looking for help with ...
-- 💬 Ask me about ...
-- 📫 How to reach me: ...
-- 😄 Pronouns: ...
-- ⚡ Fun fact: ...
--->
+- React
+- Next.js
+- TypeScript
+- Node.js
+- Express
+- MySQL
+- SQL Server
+- Tailwind CSS
+- Docker
+- Git
+- Linux
+
+## 💻 Projetos
+
+### 🎫 Gestifique
+Sistema completo de gerenciamento de tickets, SLA, atendimento e automações.
+
+### 🎬 Flixa
+Plataforma de entretenimento com catálogo, grupos, esportes e integrações externas.
+
+### 🏛 Portal Meta
+Sistema web para gerenciamento e acompanhamento de demandas.
+
+## 📊 GitHub
+
+<!-- aqui podemos colocar seus gráficos -->
+
+## 📫 Contato
+
+- GitHub: @kaueajure
+- Email: kaueajure@gmail.com
+- LinkedIn: linkedin.com/in/kaueajure
