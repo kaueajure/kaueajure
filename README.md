@@ -114,9 +114,9 @@ Sistema web de **gestão e acompanhamento de demandas**.
 </picture>
 
 <picture>
-  <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/kaueajure/kaueajure/output/github-contribution-grid-snake-dark.svg?v=ajr4" />
-  <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/kaueajure/kaueajure/output/github-contribution-grid-snake.svg?v=ajr4" />
-  <img width="620" alt="Contribuições reais do GitHub" src="https://raw.githubusercontent.com/kaueajure/kaueajure/output/github-contribution-grid-snake.svg?v=ajr4" />
+  <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/kaueajure/kaueajure/output/github-contribution-grid-snake-dark.svg?v=ajr5" />
+  <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/kaueajure/kaueajure/output/github-contribution-grid-snake.svg?v=ajr5" />
+  <img width="620" alt="Contribuições reais do GitHub" src="https://raw.githubusercontent.com/kaueajure/kaueajure/output/github-contribution-grid-snake.svg?v=ajr5" />
 </picture>
 
 </div>
