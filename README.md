@@ -10,13 +10,9 @@
 
 </div>
 
-<img width="100%" src="https://raw.githubusercontent.com/kaueajure/kaueajure/main/assets/divider.svg" alt="" />
-
 ## 👨‍💻 Sobre mim
 
 Desenvolvedor **Full Stack** com foco em aplicações web, SaaS, APIs e bancos de dados.
-
-<img width="100%" src="https://raw.githubusercontent.com/kaueajure/kaueajure/main/assets/divider.svg" alt="" />
 
 ## ⚡ Tech Stack
 
@@ -38,8 +34,6 @@ Desenvolvedor **Full Stack** com foco em aplicações web, SaaS, APIs e bancos d
 ![Linux](https://img.shields.io/badge/Linux-FCC624?style=for-the-badge&logo=linux&logoColor=black)
 
 </div>
-
-<img width="100%" src="https://raw.githubusercontent.com/kaueajure/kaueajure/main/assets/divider.svg" alt="" />
 
 ## 🚀 Projetos em destaque
 
@@ -82,8 +76,6 @@ Sistema web de **gestão e acompanhamento de demandas**.
 [Ver todos os repositórios →](https://github.com/kaueajure?tab=repositories)
 
 </div>
-
-<img width="100%" src="https://raw.githubusercontent.com/kaueajure/kaueajure/main/assets/divider.svg" alt="" />
 
 ## 📊 GitHub
 
