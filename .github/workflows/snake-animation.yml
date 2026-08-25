@@ -1,12 +1,7 @@
 name: Snake animation
 
 on:
-  schedule:
-    - cron: "0 */24 * * *"
   workflow_dispatch:
-  push:
-    branches:
-      - main
 
 jobs:
   generate:
