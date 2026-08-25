@@ -10,11 +10,19 @@
 
 </div>
 
-## 👨‍💻 Sobre mim
+<picture>
+  <img width="100%" src="https://raw.githubusercontent.com/kaueajure/kaueajure/main/assets/divider.svg" alt="" />
+</picture>
+
+### 👨‍💻 Sobre mim
 
 Desenvolvedor **Full Stack** com foco em aplicações web, SaaS, APIs e bancos de dados.
 
-## ⚡ Tech Stack
+<picture>
+  <img width="100%" src="https://raw.githubusercontent.com/kaueajure/kaueajure/main/assets/divider.svg" alt="" />
+</picture>
+
+### ⚡ Tech Stack
 
 <div align="center">
 
@@ -35,13 +43,17 @@ Desenvolvedor **Full Stack** com foco em aplicações web, SaaS, APIs e bancos d
 
 </div>
 
-## 🚀 Projetos em destaque
+<picture>
+  <img width="100%" src="https://raw.githubusercontent.com/kaueajure/kaueajure/main/assets/divider.svg" alt="" />
+</picture>
+
+### 🚀 Projetos em destaque
 
 <table>
 <tr>
 <td width="50%" valign="top">
 
-### 🎫 [Gestifique](https://github.com/kaueajure/gestifique)
+#### 🎫 [Gestifique](https://github.com/kaueajure/gestifique)
 
 Plataforma de **gestão de tickets e atendimento** com SLA, portal do cliente, base de conhecimento, automações e processamento em background.
 
@@ -50,7 +62,7 @@ Plataforma de **gestão de tickets e atendimento** com SLA, portal do cliente, b
 </td>
 <td width="50%" valign="top">
 
-### 🎬 [Flixa](https://github.com/kaueajure/flixa)
+#### 🎬 [Flixa](https://github.com/kaueajure/flixa)
 
 Plataforma de **entretenimento e descoberta de conteúdo**, com catálogo, grupos, esportes e integrações externas.
 
@@ -61,7 +73,7 @@ Plataforma de **entretenimento e descoberta de conteúdo**, com catálogo, grupo
 <tr>
 <td colspan="2" valign="top">
 
-### 🏛️ [Portal Meta](https://github.com/kaueajure/portalmeta)
+#### 🏛️ [Portal Meta](https://github.com/kaueajure/portalmeta)
 
 Sistema web de **gestão e acompanhamento de demandas**.
 
@@ -77,7 +89,11 @@ Sistema web de **gestão e acompanhamento de demandas**.
 
 </div>
 
-## 📊 GitHub
+<picture>
+  <img width="100%" src="https://raw.githubusercontent.com/kaueajure/kaueajure/main/assets/divider.svg" alt="" />
+</picture>
+
+### 📊 GitHub
 
 <div align="center">
 
