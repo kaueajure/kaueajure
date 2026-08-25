@@ -2,7 +2,7 @@ import re
 import sys
 from pathlib import Path
 
-PHASE = 0.55
+PHASE = 0.72
 
 GRID_COLS = 53
 GRID_ROWS = 7
@@ -14,12 +14,11 @@ SNAKE_SEGMENTS = 4
 STOP_X = 624
 STOP_Y = 48
 
-SPIT_WINDOWS = [(58.0, 64.0), (65.0, 71.0), (72.0, 78.0)]
-HOLD_END = 82.0
-EAT_START = 82.5
-EAT_END = 96.0
-EXIT_END = 99.4
-CLEAR_START = 57.4
+SPIT_WINDOWS = [(57.0, 62.0), (62.35, 67.35), (67.7, 72.7)]
+EAT_START = 74.5
+EAT_END = 95.2
+EXIT_END = 99.6
+CLEAR_START = 56.4
 
 FONT = {
     "A": ["01110", "10001", "10001", "11111", "10001", "10001", "10001"],
@@ -216,28 +215,34 @@ def build_dot_css(ms, groups, eat_times):
     for letter_index, pts in enumerate(groups):
         start_window, end_window = SPIT_WINDOWS[letter_index]
         n = max(1, len(pts))
-        usable = (end_window - start_window) * 0.70
+        usable = (end_window - start_window) * 0.52
 
         for local_i, (idx, tx, ty) in enumerate(pts):
             start = start_window + (local_i / n) * usable
-            puff = start + 0.34
-            arrive = min(end_window, start + 1.20)
+            puff = start + .30
+            arc = start + 1.10
+            arrive = start + 1.95
+            settle = min(end_window, start + 2.20)
             eat = eat_times[idx]
-            pre_eat = max(arrive + .05, eat - .16)
-            gone = min(99.6, eat + .12)
+            pre_eat = max(settle + .05, eat - .18)
+            gone = min(99.8, eat + .20)
 
-            puff_dx = -16 - (local_i % 2) * 3
-            puff_dy = (-4, -1, 2, 4)[local_i % 4]
             dx = tx - mouth_x
             dy = ty - mouth_y
+            puff_dx = -10 - (local_i % 3) * 2
+            puff_dy = (-5, -2, 2, 5)[local_i % 4]
+            arc_dx = round(dx * .46)
+            arc_dy = round(dy * .46 - 8 - (local_i % 3) * 2)
 
             css.append(
                 f".ajr-{idx}{{animation-name:ajr-{idx}}}"
                 f"@keyframes ajr-{idx}{{"
-                f"0%,{start - .03:.2f}%{{opacity:0;transform:translate(0px,0px) scale(.45)}}"
-                f"{start:.2f}%{{opacity:1;transform:translate(-2px,0px) scale(.65)}}"
-                f"{puff:.2f}%{{opacity:1;transform:translate({puff_dx}px,{puff_dy}px) scale(.86)}}"
-                f"{arrive:.2f}%,{pre_eat:.2f}%{{opacity:1;transform:translate({dx}px,{dy}px) scale(1)}}"
+                f"0%,{start - .03:.2f}%{{opacity:0;transform:translate(0px,0px) scale(.35)}}"
+                f"{start:.2f}%{{opacity:1;transform:translate(-3px,0px) scale(.55);animation-timing-function:cubic-bezier(.2,.75,.3,1)}}"
+                f"{puff:.2f}%{{opacity:1;transform:translate({puff_dx}px,{puff_dy}px) scale(.76);animation-timing-function:cubic-bezier(.25,.65,.35,1)}}"
+                f"{arc:.2f}%{{opacity:1;transform:translate({arc_dx}px,{arc_dy}px) scale(.92);animation-timing-function:cubic-bezier(.3,.65,.4,1)}}"
+                f"{arrive:.2f}%{{opacity:1;transform:translate({dx}px,{dy}px) scale(1.08)}}"
+                f"{settle:.2f}%,{pre_eat:.2f}%{{opacity:1;transform:translate({dx}px,{dy}px) scale(1)}}"
                 f"{eat:.2f}%{{opacity:1;transform:translate({dx}px,{dy}px) scale(.82)}}"
                 f"{gone:.2f}%,100%{{opacity:0;transform:translate({dx}px,{dy}px) scale(.25)}}"
                 f"}}"
