@@ -1,0 +1,41 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="620" height="102" viewBox="0 0 620 102" role="img" aria-label="GitHub contribution snake animation">
+<style>
+  .c0{fill:#ebedf0}.c1{fill:#9be9a8}.c2{fill:#40c463}.c3{fill:#30a14e}.c4{fill:#216e39}
+  .label{fill:#57606a;font:8px -apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif}
+  .body{fill:none;stroke:#2da44e;stroke-width:6;stroke-linecap:round;stroke-linejoin:round;pathLength:1000;stroke-dasharray:92 908}
+  .head{fill:#2da44e;stroke:#1a7f37;stroke-width:1}
+  .eye{fill:#fff}.pupil{fill:#24292f}
+  @media(prefers-color-scheme:dark){
+    .c0{fill:#161b22}.c1{fill:#0e4429}.c2{fill:#006d32}.c3{fill:#26a641}.c4{fill:#39d353}
+    .label{fill:#8b949e}.body{stroke:#39d353}.head{fill:#39d353;stroke:#2ea043}.pupil{fill:#0d1117}
+  }
+</style>
+<defs>
+  <pattern id="grid" width="11" height="11" patternUnits="userSpaceOnUse">
+    <rect width="8" height="8" rx="1.8" class="c0"/>
+  </pattern>
+  <path id="route" d="M28 44 C38 44 38 66 50 66 S61 33 72 33 S83 55 94 55 S105 77 116 77 S127 55 138 55 S149 66 160 66 S171 44 182 44 S193 33 204 33 S215 55 226 55 S237 66 248 66 S259 44 270 44 S281 77 292 77 S303 55 314 55 S325 33 336 33 S347 55 358 55 S369 66 380 66 S391 44 402 44 S413 55 424 55 S435 77 446 77 S457 55 468 55 S479 44 490 44 S501 66 512 66 S523 55 534 55 S545 33 556 33 S567 55 578 55" pathLength="1000"/>
+</defs>
+<text x="24" y="11" class="label">Sep</text><text x="78" y="11" class="label">Oct</text><text x="122" y="11" class="label">Nov</text><text x="166" y="11" class="label">Dec</text><text x="221" y="11" class="label">Jan</text><text x="265" y="11" class="label">Feb</text><text x="309" y="11" class="label">Mar</text><text x="364" y="11" class="label">Apr</text><text x="408" y="11" class="label">May</text><text x="452" y="11" class="label">Jun</text><text x="507" y="11" class="label">Jul</text><text x="551" y="11" class="label">Aug</text>
+<rect x="24" y="20" width="572" height="77" fill="url(#grid)"/>
+<g>
+  <rect x="24" y="40" width="8" height="8" rx="2" class="c2"/><rect x="46" y="62" width="8" height="8" rx="2" class="c1"/>
+  <rect x="68" y="29" width="8" height="8" rx="2" class="c2"/><rect x="90" y="51" width="8" height="8" rx="2" class="c3"/>
+  <rect x="112" y="73" width="8" height="8" rx="2" class="c1"/><rect x="134" y="51" width="8" height="8" rx="2" class="c2"/>
+  <rect x="156" y="62" width="8" height="8" rx="2" class="c1"/><rect x="178" y="40" width="8" height="8" rx="2" class="c3"/>
+  <rect x="200" y="29" width="8" height="8" rx="2" class="c1"/><rect x="222" y="51" width="8" height="8" rx="2" class="c2"/>
+  <rect x="244" y="62" width="8" height="8" rx="2" class="c1"/><rect x="266" y="40" width="8" height="8" rx="2" class="c3"/>
+  <rect x="288" y="73" width="8" height="8" rx="2" class="c1"/><rect x="310" y="51" width="8" height="8" rx="2" class="c2"/>
+  <rect x="332" y="29" width="8" height="8" rx="2" class="c1"/><rect x="354" y="51" width="8" height="8" rx="2" class="c4"/>
+  <rect x="376" y="62" width="8" height="8" rx="2" class="c2"/><rect x="398" y="40" width="8" height="8" rx="2" class="c1"/>
+  <rect x="420" y="51" width="8" height="8" rx="2" class="c3"/><rect x="442" y="73" width="8" height="8" rx="2" class="c2"/>
+  <rect x="464" y="51" width="8" height="8" rx="2" class="c1"/><rect x="486" y="40" width="8" height="8" rx="2" class="c3"/>
+  <rect x="508" y="62" width="8" height="8" rx="2" class="c2"/><rect x="530" y="51" width="8" height="8" rx="2" class="c1"/>
+  <rect x="552" y="29" width="8" height="8" rx="2" class="c4"/><rect x="574" y="51" width="8" height="8" rx="2" class="c3"/>
+</g>
+<use href="#route" class="body"><animate attributeName="stroke-dashoffset" from="92" to="-908" dur="12s" repeatCount="indefinite"/></use>
+<g>
+  <circle r="5.4" class="head"/><circle cx="-1.7" cy="-1.4" r="1.05" class="eye"/><circle cx="1.7" cy="-1.4" r="1.05" class="eye"/><circle cx="-1.7" cy="-1.4" r=".45" class="pupil"/><circle cx="1.7" cy="-1.4" r=".45" class="pupil"/>
+  <animateMotion dur="12s" repeatCount="indefinite" rotate="auto" calcMode="paced"><mpath href="#route"/></animateMotion>
+</g>
+</svg>
