@@ -113,6 +113,6 @@ Sistema web de **gestão e acompanhamento de demandas**.
   <img height="165" alt="Linguagens mais usadas" src="https://github-readme-stats.vercel.app/api/top-langs/?username=kaueajure&layout=compact&hide_border=true" />
 </picture>
 
-<img width="720" alt="Contribuições do GitHub" src="https://raw.githubusercontent.com/kaueajure/kaueajure/main/assets/contribution-snake.svg?v=3" />
+<img width="620" alt="Contribuições do GitHub" src="https://raw.githubusercontent.com/kaueajure/kaueajure/main/assets/contribution-snake-v2.svg" />
 
 </div>
