@@ -122,11 +122,7 @@ Estou sempre construindo novos projetos e experimentando soluções para **SaaS,
 
 ### 🐍 Contribuições em movimento
 
-<picture>
-  <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/kaueajure/kaueajure/output/github-snake-dark.svg" />
-  <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/kaueajure/kaueajure/output/github-snake.svg" />
-  <img width="100%" alt="Animação snake das contribuições do GitHub" src="https://raw.githubusercontent.com/kaueajure/kaueajure/output/github-snake.svg" />
-</picture>
+<img width="100%" alt="Animação snake das contribuições públicas recentes" src="https://raw.githubusercontent.com/kaueajure/kaueajure/main/assets/contribution-snake.svg" />
 
 </div>
 
