@@ -262,18 +262,26 @@ def expand_targets(
     return route, arrival
 
 
+def top_left_origin(valid_slots: set[tuple[int, int]]) -> tuple[int, int]:
+    if not valid_slots:
+        raise RuntimeError("The contribution calendar has no valid origin")
+    return min(valid_slots, key=lambda point: (point[0], point[1]))
+
+
 def build_real_route(
-    cells: list[Cell], active: list[Cell]
+    cells: list[Cell], active: list[Cell], origin: tuple[int, int]
 ) -> tuple[list[tuple[int, int]], dict[tuple[int, int], int]]:
     valid_slots = {(cell.col, cell.row) for cell in cells}
     points = {(cell.col, cell.row) for cell in active}
-    targets = ordered_column_sweep(points, ascending=True, finish=STOP)
-    route, arrival = expand_targets(targets, valid_slots)
+    targets = ordered_column_sweep(
+        points, ascending=True, start=origin, finish=STOP
+    )
+    route, arrival = expand_targets(targets, valid_slots, start=origin)
 
-    if not route:
+    if not active:
         if STOP not in valid_slots:
             raise RuntimeError("The AJR staging slot does not exist in this calendar")
-        route = [STOP]
+        route = [origin]
 
     # Enter the final pose from the nearest side. All positions are real
     # calendar slots; no clipping is needed to hide invalid movement.
@@ -289,7 +297,7 @@ def build_real_route(
 
 
 def build_letter_route(
-    valid_slots: set[tuple[int, int]],
+    valid_slots: set[tuple[int, int]], return_to: tuple[int, int]
 ) -> tuple[list[tuple[int, int]], dict[int, int]]:
     letters = letter_cells()
     by_position = {(col, row): index for index, col, row in letters}
@@ -299,6 +307,9 @@ def build_letter_route(
         raise RuntimeError(f"AJR overlaps missing calendar slots: {sorted(missing)}")
     route, arrivals_by_position = expand_targets(targets, valid_slots, start=STOP)
     arrivals = {by_position[position]: step for position, step in arrivals_by_position.items()}
+    append_shortest_path(route, return_to, valid_slots)
+    # Let the body retract into the origin before the invisible animation reset.
+    route.extend([return_to] * (SNAKE_SEGMENTS - 1))
     return route, arrivals
 
 
@@ -401,9 +412,10 @@ def render(svg: str) -> str:
     palette = parse_palette(source_style)
     cells = parse_cells(svg, source_style)
     valid_slots = {(cell.col, cell.row) for cell in cells}
+    origin = top_left_origin(valid_slots)
     active = [cell for cell in cells if cell.color]
-    real_route, real_arrivals = build_real_route(cells, active)
-    letter_route, letter_arrivals = build_letter_route(valid_slots)
+    real_route, real_arrivals = build_real_route(cells, active, origin)
+    letter_route, letter_arrivals = build_letter_route(valid_slots, origin)
     assert_valid_route(real_route, "Contribution route", valid_slots)
     assert_valid_route(letter_route, "AJR route", valid_slots)
 
@@ -520,7 +532,8 @@ def render(svg: str) -> str:
         f'<svg viewBox="0 0 {GRID_WIDTH} {GRID_HEIGHT}" width="{GRID_WIDTH}" '
         f'height="{GRID_HEIGHT}" xmlns="http://www.w3.org/2000/svg" role="img" '
         'aria-label="Animação das contribuições do GitHub de Kauê Ajure">'
-        '<desc>Grade real de contribuições com uma cobra que forma e recolhe as iniciais AJR.</desc>'
+        '<desc>A cobra sai do canto superior esquerdo, percorre as contribuições, '
+        'forma e recolhe AJR e retorna à origem.</desc>'
         f'<style>{"".join(styles)}</style>'
         '<g id="contribution-grid">'
         f'{"".join(grid_markup)}</g>'

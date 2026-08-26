@@ -53,13 +53,28 @@ class SnakeRegressionTests(unittest.TestCase):
 
     def test_every_route_step_uses_a_real_adjacent_slot(self):
         active = [cell for cell in self.cells if cell.color]
-        real_route, _ = add_ajr.build_real_route(self.cells, active)
-        letter_route, _ = add_ajr.build_letter_route(self.valid)
+        origin = add_ajr.top_left_origin(self.valid)
+        real_route, _ = add_ajr.build_real_route(self.cells, active, origin)
+        letter_route, _ = add_ajr.build_letter_route(self.valid, origin)
 
         add_ajr.assert_valid_route(real_route, "test route", self.valid)
         add_ajr.assert_valid_route(letter_route, "test AJR route", self.valid)
+        self.assertEqual((0, 0), real_route[0])
+        self.assertEqual(real_route[0], letter_route[-1])
         self.assertNotIn((52, 3), real_route)
         self.assertNotIn((52, 4), real_route)
+
+    def test_loop_returns_the_whole_snake_to_its_origin(self):
+        active = [cell for cell in self.cells if cell.color]
+        origin = add_ajr.top_left_origin(self.valid)
+        real_route, _ = add_ajr.build_real_route(self.cells, active, origin)
+        finale_route, _ = add_ajr.build_letter_route(self.valid, origin)
+
+        self.assertEqual(origin, real_route[0])
+        self.assertEqual(
+            [origin] * add_ajr.SNAKE_SEGMENTS,
+            finale_route[-add_ajr.SNAKE_SEGMENTS :],
+        )
 
     def test_spit_is_deliberately_slow(self):
         pixel_count = len(add_ajr.letter_cells())
