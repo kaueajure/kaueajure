@@ -1,17 +1,22 @@
 """Build a deterministic contribution snake with a slow AJR finale.
 
-Platane/snk is still used as the contribution-data source, but its route and
-rendering are intentionally discarded. This keeps the calendar accurate while
-giving us full control over the path, timing and bounds of the final SVG.
+Platane/snk supplies the base grid. GitHub's GraphQL calendar is the source of
+truth for dates, daily counts, intensity levels and the rolling yearly total.
+The original route and rendering are discarded so the custom animation stays
+inside real slots while preserving and validating the underlying data.
 """
 
 from __future__ import annotations
 
+import argparse
+import json
+import os
 import re
 import sys
 from collections import deque
 from dataclasses import dataclass
 from pathlib import Path
+from urllib.request import Request, urlopen
 
 
 GRID_COLS = 53
@@ -20,6 +25,7 @@ GRID_PITCH = 16
 CELL_SIZE = 12
 GRID_WIDTH = GRID_COLS * GRID_PITCH
 GRID_HEIGHT = GRID_ROWS * GRID_PITCH
+OUTPUT_HEIGHT = GRID_HEIGHT + 24
 
 STOP = (39, 3)
 SNAKE_SEGMENTS = 6
@@ -45,6 +51,108 @@ class Cell:
     col: int
     row: int
     color: str | None
+
+
+@dataclass(frozen=True)
+class ContributionDay:
+    date: str
+    count: int
+    level: str
+
+
+@dataclass(frozen=True)
+class ContributionCalendar:
+    total: int
+    days: dict[tuple[int, int], ContributionDay]
+
+
+LEVEL_COLORS = {
+    "NONE": None,
+    "FIRST_QUARTILE": "c1",
+    "SECOND_QUARTILE": "c2",
+    "THIRD_QUARTILE": "c3",
+    "FOURTH_QUARTILE": "c4",
+}
+
+
+def fetch_contribution_calendar(username: str, token: str) -> ContributionCalendar:
+    """Fetch the same rolling contribution calendar displayed by GitHub."""
+    query = """
+    query($login: String!) {
+      user(login: $login) {
+        contributionsCollection {
+          contributionCalendar {
+            totalContributions
+            weeks {
+              contributionDays {
+                date
+                weekday
+                contributionCount
+                contributionLevel
+              }
+            }
+          }
+        }
+      }
+    }
+    """
+    request = Request(
+        "https://api.github.com/graphql",
+        data=json.dumps({"query": query, "variables": {"login": username}}).encode(),
+        headers={
+            "Accept": "application/vnd.github+json",
+            "Authorization": f"Bearer {token}",
+            "Content-Type": "application/json",
+            "User-Agent": "kaueajure-contribution-snake",
+            "X-GitHub-Api-Version": "2022-11-28",
+        },
+        method="POST",
+    )
+
+    try:
+        with urlopen(request, timeout=30) as response:
+            payload = json.load(response)
+    except Exception as error:
+        raise RuntimeError(
+            f"Could not fetch the GitHub contribution calendar: {error}"
+        ) from error
+
+    if payload.get("errors"):
+        raise RuntimeError(f"GitHub contribution query failed: {payload['errors']}")
+
+    try:
+        source = payload["data"]["user"]["contributionsCollection"]
+        calendar = source["contributionCalendar"]
+        days = {
+            (col, day["weekday"]): ContributionDay(
+                day["date"], day["contributionCount"], day["contributionLevel"]
+            )
+            for col, week in enumerate(calendar["weeks"])
+            for day in week["contributionDays"]
+        }
+        result = ContributionCalendar(calendar["totalContributions"], days)
+    except (KeyError, TypeError) as error:
+        raise RuntimeError("GitHub returned an incomplete contribution calendar") from error
+
+    if result.total != sum(day.count for day in result.days.values()):
+        raise RuntimeError("GitHub contribution total does not match its daily counts")
+    return result
+
+
+def validate_calendar(cells: list[Cell], calendar: ContributionCalendar) -> None:
+    source_slots = {(cell.col, cell.row) for cell in cells}
+    if source_slots != set(calendar.days):
+        raise RuntimeError("Platane/snk grid does not match GitHub's real calendar dates")
+
+    for cell in cells:
+        day = calendar.days[(cell.col, cell.row)]
+        expected_color = LEVEL_COLORS.get(day.level)
+        if day.level not in LEVEL_COLORS:
+            raise RuntimeError(f"Unknown GitHub contribution level: {day.level}")
+        if cell.color != expected_color:
+            raise RuntimeError(
+                f"Contribution mismatch on {day.date}: SVG={cell.color}, GitHub={day.level}"
+            )
 
 
 def pct(seconds: float, duration: float) -> str:
@@ -403,7 +511,7 @@ def build_spit_keyframes(
     return f"@keyframes spit-{index}{{{body}}}"
 
 
-def render(svg: str) -> str:
+def render(svg: str, calendar: ContributionCalendar) -> str:
     style_match = re.search(r"<style>(.*?)</style>", svg, re.DOTALL)
     if not style_match:
         raise RuntimeError("Generated SVG has no style block")
@@ -411,6 +519,7 @@ def render(svg: str) -> str:
     source_style = style_match.group(1)
     palette = parse_palette(source_style)
     cells = parse_cells(svg, source_style)
+    validate_calendar(cells, calendar)
     valid_slots = {(cell.col, cell.row) for cell in cells}
     origin = top_left_origin(valid_slots)
     active = [cell for cell in cells if cell.color]
@@ -442,6 +551,8 @@ def render(svg: str) -> str:
         ".snake-pupil{fill:#1f2328}",
         ".snake-shine{fill:#fff;opacity:.28}",
         ".snake-mouth{fill:none;stroke:#1f2328;stroke-width:.75;stroke-linecap:round}",
+        ".total-label{fill:var(--ct);font:600 11px -apple-system,BlinkMacSystemFont,"
+        '"Segoe UI",sans-serif;text-anchor:middle}',
         f".spit{{fill:var(--cs);opacity:0;animation-duration:{duration:.3f}s;"
         "animation-timing-function:linear;animation-iteration-count:infinite;"
         "transform-box:fill-box;transform-origin:center}",
@@ -489,9 +600,12 @@ def render(svg: str) -> str:
             classes.extend(("contribution", f"contribution-{index}"))
         x = 2 + cell.col * GRID_PITCH
         y = 2 + cell.row * GRID_PITCH
+        day = calendar.days[(cell.col, cell.row)]
+        contribution_word = "contribuição" if day.count == 1 else "contribuições"
         grid_markup.append(
             f'<rect class="{" ".join(classes)}" x="{x}" y="{y}" '
-            f'width="{CELL_SIZE}" height="{CELL_SIZE}" rx="2" ry="2"/>'
+            f'width="{CELL_SIZE}" height="{CELL_SIZE}" rx="2" ry="2">'
+            f'<title>{day.date}: {day.count} {contribution_word}</title></rect>'
         )
 
     snake_markup = ['<g id="snake" pointer-events="none">']
@@ -528,22 +642,38 @@ def render(svg: str) -> str:
         )
     spit_markup.append("</g>")
 
+    empty_color = palette["ce"].lstrip("#")
+    empty_rgb = tuple(int(empty_color[index : index + 2], 16) for index in (0, 2, 4))
+    label_color = "#8b949e" if sum(empty_rgb) < 384 else "#57606a"
+    styles[0] = styles[0][:-1] + f"--ct:{label_color};}}"
+
+    total_label = f"{calendar.total:,}".replace(",", ".")
     output = (
-        f'<svg viewBox="0 0 {GRID_WIDTH} {GRID_HEIGHT}" width="{GRID_WIDTH}" '
-        f'height="{GRID_HEIGHT}" xmlns="http://www.w3.org/2000/svg" role="img" '
-        'aria-label="Animação das contribuições do GitHub de Kauê Ajure">'
-        '<desc>A cobra sai do canto superior esquerdo, percorre as contribuições, '
+        f'<svg viewBox="0 0 {GRID_WIDTH} {OUTPUT_HEIGHT}" width="{GRID_WIDTH}" '
+        f'height="{OUTPUT_HEIGHT}" xmlns="http://www.w3.org/2000/svg" role="img" '
+        f'aria-label="{total_label} contribuições de Kauê Ajure no último ano">'
+        f'<desc>Calendário real com {total_label} contribuições. '
+        'A cobra sai do canto superior esquerdo, percorre as contribuições, '
         'forma e recolhe AJR e retorna à origem.</desc>'
         f'<style>{"".join(styles)}</style>'
         '<g id="contribution-grid">'
         f'{"".join(grid_markup)}</g>'
         f'{"".join(snake_markup)}'
         f'{"".join(spit_markup)}'
+        f'<text class="total-label" x="{GRID_WIDTH / 2:g}" y="129">'
+        f'{total_label} contribuições no último ano · dados reais do GitHub</text>'
         "</svg>"
     )
 
     validate_output(
-        output, len(cells), len(active), len(letters), real_route, letter_route, valid_slots
+        output,
+        len(cells),
+        len(active),
+        len(letters),
+        real_route,
+        letter_route,
+        valid_slots,
+        calendar,
     )
     return output
 
@@ -556,6 +686,7 @@ def validate_output(
     real_route: list[tuple[int, int]],
     letter_route: list[tuple[int, int]],
     valid_slots: set[tuple[int, int]],
+    calendar: ContributionCalendar,
 ) -> None:
     if svg.count('class="cell') != cell_count:
         raise RuntimeError("Output does not contain exactly one rectangle per grid slot")
@@ -567,23 +698,41 @@ def validate_output(
         raise RuntimeError("Snake segment count changed")
     if 'clip-path=' in svg or 'class="grid-slot"' in svg or 'class="final-clear"' in svg:
         raise RuntimeError("Legacy clipping or duplicate-grid markup survived the refactor")
-    if f'viewBox="0 0 {GRID_WIDTH} {GRID_HEIGHT}"' not in svg:
-        raise RuntimeError("SVG viewport is not restricted to the real contribution grid")
+    if f'viewBox="0 0 {GRID_WIDTH} {OUTPUT_HEIGHT}"' not in svg:
+        raise RuntimeError("SVG viewport does not fit the real calendar and its total")
+    if svg.count("<title>") != cell_count:
+        raise RuntimeError("Not every calendar slot contains its exact daily count")
+    total_label = f"{calendar.total:,}".replace(",", ".")
+    if f"{total_label} contribuições no último ano" not in svg:
+        raise RuntimeError("Exact GitHub contribution total is missing")
     assert_valid_route(real_route, "Contribution route", valid_slots)
     assert_valid_route(letter_route, "AJR route", valid_slots)
 
 
-def patch(path: str) -> None:
+def patch(path: str, calendar: ContributionCalendar) -> None:
     source = Path(path)
-    source.write_text(render(source.read_text(encoding="utf-8")), encoding="utf-8")
+    source.write_text(
+        render(source.read_text(encoding="utf-8"), calendar), encoding="utf-8"
+    )
 
 
 def main(arguments: list[str]) -> int:
-    if not arguments:
-        print("usage: add-ajr.py SVG [SVG ...]", file=sys.stderr)
-        return 2
-    for filename in arguments:
-        patch(filename)
+    parser = argparse.ArgumentParser()
+    parser.add_argument("--github-user", required=True)
+    parser.add_argument("svg", nargs="+")
+    options = parser.parse_args(arguments)
+
+    token = os.environ.get("GITHUB_TOKEN")
+    if not token:
+        parser.error("GITHUB_TOKEN is required to validate the real contribution data")
+
+    calendar = fetch_contribution_calendar(options.github_user, token)
+    print(
+        f"Validated {calendar.total} real GitHub contributions across "
+        f"{sum(day.count > 0 for day in calendar.days.values())} active days"
+    )
+    for filename in options.svg:
+        patch(filename, calendar)
     return 0
 
 

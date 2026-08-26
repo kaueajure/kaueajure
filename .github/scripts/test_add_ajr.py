@@ -2,6 +2,7 @@ import importlib.util
 import re
 import sys
 import unittest
+from datetime import date, timedelta
 from pathlib import Path
 
 
@@ -35,15 +36,35 @@ def generated_fixture() -> str:
     return f'<svg><style>{style}</style>{"".join(cells)}</svg>'
 
 
+def calendar_fixture() -> add_ajr.ContributionCalendar:
+    missing = {(52, 3), (52, 4), (52, 5), (52, 6)}
+    active = {
+        (36, 4): (8, "THIRD_QUARTILE"),
+        (52, 2): (20, "FOURTH_QUARTILE"),
+    }
+    first_day = date(2025, 8, 24)
+    days = {}
+    for col in range(add_ajr.GRID_COLS):
+        for row in range(add_ajr.GRID_ROWS):
+            if (col, row) in missing:
+                continue
+            count, level = active.get((col, row), (0, "NONE"))
+            days[(col, row)] = add_ajr.ContributionDay(
+                (first_day + timedelta(days=col * 7 + row)).isoformat(), count, level
+            )
+    return add_ajr.ContributionCalendar(28, days)
+
+
 class SnakeRegressionTests(unittest.TestCase):
     def setUp(self):
         self.source = generated_fixture()
         self.style = re.search(r"<style>(.*?)</style>", self.source).group(1)
         self.cells = add_ajr.parse_cells(self.source, self.style)
         self.valid = {(cell.col, cell.row) for cell in self.cells}
+        self.calendar = calendar_fixture()
 
     def test_partial_week_is_preserved(self):
-        output = add_ajr.render(self.source)
+        output = add_ajr.render(self.source, self.calendar)
 
         self.assertEqual(367, output.count('class="cell'))
         self.assertNotIn('<rect class="cell" x="834" y="50"', output)
@@ -87,11 +108,28 @@ class SnakeRegressionTests(unittest.TestCase):
         self.assertGreaterEqual(add_ajr.SPIT_FLIGHT_SECONDS, 1.5)
 
     def test_output_is_cropped_to_the_calendar(self):
-        output = add_ajr.render(self.source)
+        output = add_ajr.render(self.source, self.calendar)
 
-        self.assertIn('viewBox="0 0 848 112"', output)
+        self.assertIn('viewBox="0 0 848 136"', output)
         self.assertNotIn('viewBox="-16 -32 880 192"', output)
         self.assertEqual(add_ajr.SNAKE_SEGMENTS, output.count('class="snake-segment'))
+
+    def test_exact_github_counts_are_visible_and_attached_to_days(self):
+        output = add_ajr.render(self.source, self.calendar)
+
+        self.assertIn("28 contribuições no último ano", output)
+        self.assertIn("2026-08-25: 20 contribuições", output)
+        self.assertEqual(len(self.calendar.days), output.count("<title>"))
+
+    def test_calendar_mismatch_stops_publication(self):
+        wrong_days = dict(self.calendar.days)
+        wrong_days[(36, 4)] = add_ajr.ContributionDay(
+            wrong_days[(36, 4)].date, 8, "FIRST_QUARTILE"
+        )
+        wrong_calendar = add_ajr.ContributionCalendar(28, wrong_days)
+
+        with self.assertRaisesRegex(RuntimeError, "Contribution mismatch"):
+            add_ajr.render(self.source, wrong_calendar)
 
 
 if __name__ == "__main__":

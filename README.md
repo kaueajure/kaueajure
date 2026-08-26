@@ -41,7 +41,6 @@ Atuo do front-end ao back-end, incluindo APIs, autenticação, integrações, co
 ![MySQL](https://img.shields.io/badge/MySQL-4479A1?style=for-the-badge&logo=mysql&logoColor=white)
 ![SQL Server](https://img.shields.io/badge/SQL%20Server-CC2927?style=for-the-badge&logo=microsoftsqlserver&logoColor=white)
 ![Tailwind CSS](https://img.shields.io/badge/Tailwind%20CSS-06B6D4?style=for-the-badge&logo=tailwindcss&logoColor=white)
-
 ![Git](https://img.shields.io/badge/Git-F05032?style=for-the-badge&logo=git&logoColor=white)
 ![Linux](https://img.shields.io/badge/Linux-FCC624?style=for-the-badge&logo=linux&logoColor=black)
 
@@ -104,7 +103,7 @@ Sistema web de **gestão e acompanhamento de demandas**.
 <picture>
   <source media="(prefers-color-scheme: dark)" srcset="https://github-readme-stats.vercel.app/api?username=kaueajure&show_icons=true&hide_border=true&rank_icon=github&theme=github_dark" />
   <source media="(prefers-color-scheme: light)" srcset="https://github-readme-stats.vercel.app/api?username=kaueajure&show_icons=true&hide_border=true&rank_icon=github&theme=default" />
-  <img height="165" alt="Estatísticas do GitHub de Kauê Ajure" src="https://github-readme-stats.vercel.app/api?username=kaueajure&show_icons=true&hide_border=true&rank_icon=github" />
+  <img height="165" alt="Visão geral da atividade de Kauê Ajure no GitHub" src="https://github-readme-stats.vercel.app/api?username=kaueajure&show_icons=true&hide_border=true&rank_icon=github" />
 </picture>
 
 <picture>
@@ -114,9 +113,9 @@ Sistema web de **gestão e acompanhamento de demandas**.
 </picture>
 
 <picture>
-  <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/kaueajure/kaueajure/output/github-contribution-grid-snake-dark.svg?v=ajr6" />
-  <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/kaueajure/kaueajure/output/github-contribution-grid-snake.svg?v=ajr6" />
-  <img width="620" alt="Contribuições reais do GitHub" src="https://raw.githubusercontent.com/kaueajure/kaueajure/output/github-contribution-grid-snake.svg?v=ajr6" />
+  <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/kaueajure/kaueajure/output/github-contribution-grid-snake-dark.svg?v=ajr7" />
+  <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/kaueajure/kaueajure/output/github-contribution-grid-snake.svg?v=ajr7" />
+  <img width="620" alt="Calendário real de contribuições de Kauê Ajure" src="https://raw.githubusercontent.com/kaueajure/kaueajure/output/github-contribution-grid-snake.svg?v=ajr7" />
 </picture>
 
 </div>
