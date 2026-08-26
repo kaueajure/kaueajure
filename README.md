@@ -6,6 +6,7 @@
 
 [![LinkedIn](https://img.shields.io/badge/LinkedIn-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/kaueajure/)
 [![GitHub](https://img.shields.io/badge/GitHub-6E7681?style=for-the-badge&logo=github&logoColor=white)](https://github.com/kaueajure)
+[![Portfolio](https://img.shields.io/badge/Portfolio-111111?style=for-the-badge&logo=vercel&logoColor=white)](https://kaueajure.website/)
 [![Email](https://img.shields.io/badge/Email-FFFFFF?style=for-the-badge&logo=gmail&logoColor=EA4335)](mailto:kaueajure@gmail.com)
 
 </div>
