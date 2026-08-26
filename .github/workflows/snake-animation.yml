@@ -10,6 +10,7 @@ on:
     paths:
       - ".github/workflows/snake-animation.yml"
       - ".github/scripts/add-ajr.py"
+      - ".github/scripts/test_add_ajr.py"
 
 permissions:
   contents: write
@@ -22,6 +23,9 @@ jobs:
     steps:
       - name: Checkout profile repository
         uses: actions/checkout@v4
+
+      - name: Run snake regression tests
+        run: python .github/scripts/test_add_ajr.py
 
       - name: Generate snake from real GitHub contributions
         uses: Platane/snk/svg-only@v3
