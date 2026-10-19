@@ -51,46 +51,123 @@ Atuo do front-end ao back-end, incluindo APIs, autenticação, integrações, co
   <img width="100%" src="https://raw.githubusercontent.com/kaueajure/kaueajure/main/assets/divider.svg" alt="" />
 </picture>
 
-### 🚀 Projetos em destaque
+### 🚀 Projetos — showcase
+
+Uma seleção de produtos, plataformas, jogos e ferramentas que desenvolvi. As apresentações abaixo mostram a proposta e as funcionalidades de cada projeto, **sem expor o código-fonte**.
+
+> 🔒 **Código privado, apresentação pública.** Os repositórios de implementação são privados. Este perfil reúne apenas informações de demonstração dos projetos.
+
+#### 🎮 Produtos e experiências digitais
 
 <table>
 <tr>
 <td width="50%" valign="top">
-
-#### 🎫 [Gestifique](https://github.com/kaueajure/gestifique)
-
-Plataforma de **gestão de tickets e atendimento** com SLA, portal do cliente, base de conhecimento, automações e processamento em background.
-
-**Stack:** React · TypeScript · Node.js · Express · MySQL · Redis · Socket.IO
-
+<h3>🎬 Flixa</h3>
+<p><strong>Entretenimento, conteúdo e comunidade</strong></p>
+<p>Plataforma web com catálogo, biblioteca pessoal, recursos sociais, comunidades e uma área esportiva com agenda e resultados.</p>
+<p><sub>Next.js · React · TypeScript · MySQL</sub></p>
 </td>
 <td width="50%" valign="top">
-
-#### 🎬 [Flixa](https://github.com/kaueajure/flixa)
-
-Plataforma de **entretenimento e descoberta de conteúdo**, com catálogo, grupos, esportes e integrações externas.
-
-**Stack:** TypeScript · React · APIs · Cloudflare · Drizzle
-
+<h3>⚽ Viztto Fut</h3>
+<p><strong>Simulador de carreira no futebol</strong></p>
+<p>Experiência de evolução de um atleta com treinos, decisões de carreira e passagem do tempo, sem partidas controladas diretamente.</p>
+<p><sub>Next.js · TypeScript · Simulação esportiva</sub></p>
+</td>
+</tr>
+<tr>
+<td width="50%" valign="top">
+<h3>📅 Lolis</h3>
+<p><strong>Agenda compartilhada com experiência mobile</strong></p>
+<p>Aplicativo web pensado para iPhone, com organização de compromissos, informações compartilhadas e recursos de notificações.</p>
+<p><sub>Next.js · React · TypeScript · MySQL · PWA</sub></p>
+</td>
+<td width="50%" valign="top">
+<h3>✨ Aura &amp; Ego</h3>
+<p><strong>Jogo competitivo 3D para navegador</strong></p>
+<p>Partidas baseadas em timing, estratégia e leitura do adversário, com salas online e processamento autoritativo no servidor.</p>
+<p><sub>React · Three.js · Node.js · Socket.IO</sub></p>
 </td>
 </tr>
 <tr>
 <td colspan="2" valign="top">
+<h3>⚔️ Battle Royale Minecraft</h3>
+<p><strong>Modo competitivo desenvolvido como plugin para Minecraft</strong></p>
+<p>Partidas com arena, loot finito, raridades, habilidades, eventos e airdrops, mantendo o combate e a construção dentro da experiência Minecraft.</p>
+<p><sub>Java · Paper · Minecraft Server</sub></p>
+</td>
+</tr>
+</table>
 
-#### 🏛️ [Portal Meta](https://github.com/kaueajure/portalmeta)
+#### 🧩 Plataformas e soluções para negócios
 
-Sistema web de **gestão e acompanhamento de demandas**.
+<table>
+<tr>
+<td width="50%" valign="top">
+<h3>🎫 Gestifique</h3>
+<p><strong>Gestão de atendimento e suporte</strong></p>
+<p>Central de chamados com SLA, portal do cliente, base de conhecimento, indicadores, automações e atualizações em tempo real.</p>
+<p><sub>React · TypeScript · Node.js · MySQL · Socket.IO</sub></p>
+</td>
+<td width="50%" valign="top">
+<h3>🏛️ Portal Meta</h3>
+<p><strong>Gestão operacional e acompanhamento de demandas</strong></p>
+<p>Sistema com chamados, usuários, agenda, relatórios e acompanhamento de obrigações e indicadores por município.</p>
+<p><sub>React · TypeScript · Node.js · MySQL</sub></p>
+</td>
+</tr>
+<tr>
+<td width="50%" valign="top">
+<h3>🏠 Kalebe Corretor</h3>
+<p><strong>Portal de imóveis e administração de anúncios</strong></p>
+<p>Vitrine imobiliária com busca, filtros, páginas de imóveis, galerias de mídia e painel administrativo para gerenciamento do catálogo.</p>
+<p><sub>Next.js · React · MySQL</sub></p>
+</td>
+<td width="50%" valign="top">
+<h3>🏡 Alonso Imobiliária</h3>
+<p><strong>Experiência web para o setor imobiliário</strong></p>
+<p>Projeto de aplicação digital voltado à apresentação de uma operação imobiliária, com estrutura web moderna.</p>
+<p><sub>Next.js · React · TypeScript · MySQL</sub></p>
+</td>
+</tr>
+<tr>
+<td colspan="2" valign="top">
+<h3>☀️ Aba Sol Energia</h3>
+<p><strong>Projeto digital para o segmento de energia solar</strong></p>
+<p>Iniciativa web voltada à presença e apresentação digital de uma marca do setor energético.</p>
+</td>
+</tr>
+</table>
 
-**Stack:** React · TypeScript · Node.js · Express · MySQL · Socket.IO
+#### 🛠️ Ferramentas e desenvolvimento
 
+<table>
+<tr>
+<td width="50%" valign="top">
+<h3>🖥️ AJR Connect</h3>
+<p><strong>Cliente de área de trabalho remota para Linux</strong></p>
+<p>Aplicativo com gerenciamento de conexões RDP, sessões Windows, reconexão e controles integrados de compartilhamento.</p>
+<p><sub>Linux · GTK4 · FreeRDP</sub></p>
+</td>
+<td width="50%" valign="top">
+<h3>📍 Maps Leads</h3>
+<p><strong>Extensão para organização de leads</strong></p>
+<p>Ferramenta para organizar informações públicas de empresas visualizadas no Google Maps, com painel, filtros e exportação.</p>
+<p><sub>Chrome Extension · Manifest V3 · JavaScript</sub></p>
+</td>
+</tr>
+<tr>
+<td colspan="2" valign="top">
+<h3>🌐 Portfólio e gestão profissional</h3>
+<p><strong>Presença digital e ferramentas de trabalho</strong></p>
+<p>Site pessoal com administração de clientes, agenda, notas, propostas e funcionalidades de apoio a serviços digitais.</p>
+<p><sub>Next.js · Supabase · PostgreSQL</sub></p>
+<p><a href="https://kaueajure.website/">Conhecer o portfólio ↗</a></p>
 </td>
 </tr>
 </table>
 
 <div align="center">
-
-[Ver todos os repositórios →](https://github.com/kaueajure?tab=repositories)
-
+<sub>As descrições apresentam o propósito dos projetos. Repositórios privados não disponibilizam o código ao público.</sub>
 </div>
 
 <picture>
