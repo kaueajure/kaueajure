@@ -1,8 +1,35 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 840 230" width="840" height="230" role="img" aria-label="Linguagens: aguardando configuracao">
-<title>Linguagens dos projetos aguardando configuracao</title>
-<rect x="0.5" y="0.5" width="839" height="229" rx="14" fill="#0d1117" stroke="#30363d"/>
-<text x="30" y="46" fill="#58a6ff" font-size="18" font-weight="bold" font-family="Arial,sans-serif">LINGUAGENS NOS PROJETOS</text>
-<text x="30" y="111" fill="#f0f6fc" font-size="27" font-weight="bold" font-family="Arial,sans-serif">Aguardando leitura autorizada</text>
-<text x="30" y="153" fill="#8b949e" font-size="16" font-family="Arial,sans-serif">Grafico gerado a partir do codigo de projetos publicos e privados.</text>
-<text x="30" y="200" fill="#8b949e" font-size="12" font-family="Arial,sans-serif">Nomes e arquivos de repositorios privados nao sao publicados neste cartao.</text>
+<svg xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Linguagens usadas nos repositorios do GitHub" viewBox="0 0 840 431" width="840" height="431">
+<title>Linguagens usadas nos repositorios do GitHub</title>
+<rect x="0.5" y="0.5" width="839" height="430" rx="14" fill="#0d1117" stroke="#30363d"/>
+<text x="30" y="43" font-family="Arial,Helvetica,sans-serif" font-size="18" font-weight="700" text-anchor="start" fill="#58a6ff">LINGUAGENS NOS PROJETOS</text>
+<text x="30" y="69" font-family="Arial,Helvetica,sans-serif" font-size="13" font-weight="400" text-anchor="start" fill="#8b949e">Percentuais por bytes de codigo identificados pelo GitHub Linguist</text>
+<text x="30" y="111" font-family="Arial,Helvetica,sans-serif" font-size="15" font-weight="600" text-anchor="start" fill="#c9d1d9">TypeScript</text>
+<rect x="260" y="94" width="460" height="17" rx="5" fill="#21262d"/>
+<rect x="260" y="94" width="262" height="17" rx="5" fill="#58a6ff"/>
+<text x="805" y="111" font-family="Arial,Helvetica,sans-serif" font-size="14" font-weight="600" text-anchor="end" fill="#f0f6fc">57.0%</text>
+<text x="30" y="152" font-family="Arial,Helvetica,sans-serif" font-size="15" font-weight="600" text-anchor="start" fill="#c9d1d9">JavaScript</text>
+<rect x="260" y="135" width="460" height="17" rx="5" fill="#21262d"/>
+<rect x="260" y="135" width="60" height="17" rx="5" fill="#3fb950"/>
+<text x="805" y="152" font-family="Arial,Helvetica,sans-serif" font-size="14" font-weight="600" text-anchor="end" fill="#f0f6fc">13.1%</text>
+<text x="30" y="193" font-family="Arial,Helvetica,sans-serif" font-size="15" font-weight="600" text-anchor="start" fill="#c9d1d9">C</text>
+<rect x="260" y="176" width="460" height="17" rx="5" fill="#21262d"/>
+<rect x="260" y="176" width="50" height="17" rx="5" fill="#d2a8ff"/>
+<text x="805" y="193" font-family="Arial,Helvetica,sans-serif" font-size="14" font-weight="600" text-anchor="end" fill="#f0f6fc">10.8%</text>
+<text x="30" y="234" font-family="Arial,Helvetica,sans-serif" font-size="15" font-weight="600" text-anchor="start" fill="#c9d1d9">Java</text>
+<rect x="260" y="217" width="460" height="17" rx="5" fill="#21262d"/>
+<rect x="260" y="217" width="41" height="17" rx="5" fill="#f0883e"/>
+<text x="805" y="234" font-family="Arial,Helvetica,sans-serif" font-size="14" font-weight="600" text-anchor="end" fill="#f0f6fc">9.0%</text>
+<text x="30" y="275" font-family="Arial,Helvetica,sans-serif" font-size="15" font-weight="600" text-anchor="start" fill="#c9d1d9">CSS</text>
+<rect x="260" y="258" width="460" height="17" rx="5" fill="#21262d"/>
+<rect x="260" y="258" width="24" height="17" rx="5" fill="#f778ba"/>
+<text x="805" y="275" font-family="Arial,Helvetica,sans-serif" font-size="14" font-weight="600" text-anchor="end" fill="#f0f6fc">5.3%</text>
+<text x="30" y="316" font-family="Arial,Helvetica,sans-serif" font-size="15" font-weight="600" text-anchor="start" fill="#c9d1d9">Python</text>
+<rect x="260" y="299" width="460" height="17" rx="5" fill="#21262d"/>
+<rect x="260" y="299" width="18" height="17" rx="5" fill="#79c0ff"/>
+<text x="805" y="316" font-family="Arial,Helvetica,sans-serif" font-size="14" font-weight="600" text-anchor="end" fill="#f0f6fc">3.9%</text>
+<text x="30" y="357" font-family="Arial,Helvetica,sans-serif" font-size="15" font-weight="600" text-anchor="start" fill="#c9d1d9">Outras</text>
+<rect x="260" y="340" width="460" height="17" rx="5" fill="#21262d"/>
+<rect x="260" y="340" width="4" height="17" rx="5" fill="#58a6ff"/>
+<text x="805" y="357" font-family="Arial,Helvetica,sans-serif" font-size="14" font-weight="600" text-anchor="end" fill="#f0f6fc">0.9%</text>
+<text x="30" y="414" font-family="Arial,Helvetica,sans-serif" font-size="12" font-weight="400" text-anchor="start" fill="#8b949e">Projetos publicos e privados | 19/10/2026 (UTC)</text>
 </svg>
