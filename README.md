@@ -168,17 +168,15 @@ Uma seleção de produtos, plataformas, jogos e ferramentas que desenvolvi. As a
 
 <div align="center">
 
-<picture>
-  <source media="(prefers-color-scheme: dark)" srcset="https://github-readme-stats.vercel.app/api?username=kaueajure&show_icons=true&hide_border=true&rank_icon=github&theme=github_dark" />
-  <source media="(prefers-color-scheme: light)" srcset="https://github-readme-stats.vercel.app/api?username=kaueajure&show_icons=true&hide_border=true&rank_icon=github&theme=default" />
-  <img height="165" alt="Visão geral da atividade de Kauê Ajure no GitHub" src="https://github-readme-stats.vercel.app/api?username=kaueajure&show_icons=true&hide_border=true&rank_icon=github" />
-</picture>
+![Atividade de desenvolvimento, incluindo projetos privados](assets/stats-gerais.svg)
 
-<picture>
-  <source media="(prefers-color-scheme: dark)" srcset="https://github-readme-stats.vercel.app/api/top-langs/?username=kaueajure&layout=compact&hide_border=true&theme=github_dark" />
-  <source media="(prefers-color-scheme: light)" srcset="https://github-readme-stats.vercel.app/api/top-langs/?username=kaueajure&layout=compact&hide_border=true&theme=default" />
-  <img height="165" alt="Linguagens mais usadas" src="https://github-readme-stats.vercel.app/api/top-langs/?username=kaueajure&layout=compact&hide_border=true" />
-</picture>
+![Linguagens dos projetos, incluindo repositórios privados](assets/linguagens.svg)
+
+</div>
+
+<sub>Os dados são atualizados diariamente pelo GitHub Actions após autorização de leitura. **Commits** = commits atribuídos à conta nos últimos 365 dias, nas branches principais dos repositórios acessíveis; podem diferir do total de contribuições do calendário. **Linguagens** = proporção de bytes detectados pelo GitHub Linguist. Os gráficos não revelam nomes nem arquivos de repositórios privados.</sub>
+
+<div align="center">
 
 <picture>
   <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/kaueajure/kaueajure/output/github-contribution-grid-snake-dark.svg?v=ajr7" />
