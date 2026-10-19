@@ -64,6 +64,7 @@ Uma seleção de produtos, plataformas, jogos e ferramentas que desenvolvi. As a
 <td width="50%" valign="top">
 <h3>🎬 Flixa</h3>
 <p><strong>Entretenimento, conteúdo e comunidade</strong></p>
+<p><a href="https://flixa.fun/">Acessar flixa.fun ↗</a></p>
 <p>Plataforma web com catálogo, biblioteca pessoal, recursos sociais, comunidades e uma área esportiva com agenda e resultados.</p>
 <p><sub>Next.js · React · TypeScript · MySQL</sub></p>
 </td>
@@ -72,20 +73,6 @@ Uma seleção de produtos, plataformas, jogos e ferramentas que desenvolvi. As a
 <p><strong>Simulador de carreira no futebol</strong></p>
 <p>Experiência de evolução de um atleta com treinos, decisões de carreira e passagem do tempo, sem partidas controladas diretamente.</p>
 <p><sub>Next.js · TypeScript · Simulação esportiva</sub></p>
-</td>
-</tr>
-<tr>
-<td width="50%" valign="top">
-<h3>📅 Lolis</h3>
-<p><strong>Agenda compartilhada com experiência mobile</strong></p>
-<p>Aplicativo web pensado para iPhone, com organização de compromissos, informações compartilhadas e recursos de notificações.</p>
-<p><sub>Next.js · React · TypeScript · MySQL · PWA</sub></p>
-</td>
-<td width="50%" valign="top">
-<h3>✨ Aura &amp; Ego</h3>
-<p><strong>Jogo competitivo 3D para navegador</strong></p>
-<p>Partidas baseadas em timing, estratégia e leitura do adversário, com salas online e processamento autoritativo no servidor.</p>
-<p><sub>React · Three.js · Node.js · Socket.IO</sub></p>
 </td>
 </tr>
 <tr>
@@ -119,12 +106,14 @@ Uma seleção de produtos, plataformas, jogos e ferramentas que desenvolvi. As a
 <td width="50%" valign="top">
 <h3>🏠 Kalebe Corretor</h3>
 <p><strong>Portal de imóveis e administração de anúncios</strong></p>
+<p><a href="https://kalebecorretor.com.br/">Acessar kalebecorretor.com.br ↗</a></p>
 <p>Vitrine imobiliária com busca, filtros, páginas de imóveis, galerias de mídia e painel administrativo para gerenciamento do catálogo.</p>
 <p><sub>Next.js · React · MySQL</sub></p>
 </td>
 <td width="50%" valign="top">
 <h3>🏡 Alonso Imobiliária</h3>
 <p><strong>Experiência web para o setor imobiliário</strong></p>
+<p><a href="https://alonsoimobiliaria.com.br/">Acessar alonsoimobiliaria.com.br ↗</a></p>
 <p>Projeto de aplicação digital voltado à apresentação de uma operação imobiliária, com estrutura web moderna.</p>
 <p><sub>Next.js · React · TypeScript · MySQL</sub></p>
 </td>
@@ -133,6 +122,7 @@ Uma seleção de produtos, plataformas, jogos e ferramentas que desenvolvi. As a
 <td colspan="2" valign="top">
 <h3>☀️ Aba Sol Energia</h3>
 <p><strong>Projeto digital para o segmento de energia solar</strong></p>
+<p><a href="https://abasolenergia.com.br/">Acessar abasolenergia.com.br ↗</a></p>
 <p>Iniciativa web voltada à presença e apresentação digital de uma marca do setor energético.</p>
 </td>
 </tr>
