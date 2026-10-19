@@ -1,0 +1,48 @@
+name: Atualizar estatísticas do perfil
+
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: "23 09 * * *"
+
+permissions:
+  contents: write
+
+concurrency:
+  group: atualizar-estatisticas-perfil
+  cancel-in-progress: false
+
+jobs:
+  atualizar:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          persist-credentials: true
+
+      - name: Verificar autorização de leitura
+        env:
+          PROFILE_STATS_TOKEN: ${{ secrets.PROFILE_STATS_TOKEN }}
+        run: |
+          if [ -z "$PROFILE_STATS_TOKEN" ]; then
+            echo "::error::Adicione PROFILE_STATS_TOKEN em Settings > Secrets and variables > Actions"
+            exit 1
+          fi
+
+      - name: Gerar gráficos agregados
+        env:
+          PROFILE_STATS_TOKEN: ${{ secrets.PROFILE_STATS_TOKEN }}
+        run: python3 scripts/atualizar_estatisticas.py
+
+      - name: Publicar gráficos no perfil
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add assets/stats-gerais.svg assets/linguagens.svg
+          if git diff --cached --quiet; then
+            echo "Nada mudou"
+          else
+            git commit -m "chore: atualizar estatísticas do perfil [skip ci]"
+            git push
+          fi
